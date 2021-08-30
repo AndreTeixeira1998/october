@@ -9,6 +9,9 @@ import (
 // App struct
 type App struct {
 	runtime *wails.Runtime
+
+	KoboService *KoboService
+	isDarkMode bool
 }
 
 // NewApp creates a new App application struct

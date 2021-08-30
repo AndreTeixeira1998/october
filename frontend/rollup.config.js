@@ -1,8 +1,10 @@
+import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
+import autoPreprocess from 'svelte-preprocess'
 import image from '@rollup/plugin-image';
 import url from '@rollup/plugin-url';
 import copy from 'rollup-plugin-copy';
@@ -35,6 +37,12 @@ export default {
             limit: Infinity,
         }),
 
+        svelte({
+            preprocess: autoPreprocess(),
+            dev: !production,
+            emitCss: true
+        }),
+
         // If you have external dependencies installed from
         // npm, you'll most likely need these plugins. In
         // some cases you'll need additional configuration -
@@ -42,6 +50,7 @@ export default {
         // https://github.com/rollup/plugins/tree/master/packages/commonjs
         resolve({
             browser: true,
+            dedupe: ['svelte']
         }),
         commonjs(),
 

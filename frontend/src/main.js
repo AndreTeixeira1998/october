@@ -1,21 +1,20 @@
+import App from './App.svelte'
+import { ready } from '@wails/runtime'
+import { routes } from 'svelte-hash-router'
+import Homepage from './Homepage.svelte'
+import Device from './Device.svelte'
 
-import {ready} from '@wails/runtime';
+let app;
 
-ready( () => {
-  // Get input + focus
-  let nameElement = document.getElementById("name");
-  nameElement.focus();
+routes.set({
+	'/': Homepage,
+	'/device': Device,
+})
 
-  // Setup the greet function
-  window.greet = function () {
-
-    // Get name
-    let name = nameElement.value;
-
-    // Call App.Greet(name)
-    window.backend.main.App.Greet(name).then((result) => {
-      // Update result with data back from App.Greet()
-      document.getElementById("result").innerText = result;
-    });
-  };
+ready(() => {
+	app = new App({
+		target: document.body,
+	});
 });
+
+export default app;

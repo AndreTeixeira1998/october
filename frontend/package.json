@@ -16,12 +16,21 @@
     "@rollup/plugin-image": "^2.0.6",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-url": "^6.0.0",
+    "@tailwindcss/postcss7-compat": "^2.2.9",
     "@wails/runtime": "^1.3.20",
+    "autoprefixer": "^9.8.5",
+    "postcss": "^7.0.36",
+    "postcss-import": "^12.0.1",
     "rollup": "^2.50.4",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sirv-cli": "^1.0.12"
+    "sirv-cli": "^1.0.12",
+    "svelte": "^3.42.4",
+    "svelte-hash-router": "^1.0.1",
+    "svelte-preprocess": "^4.8.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
   }
 }
