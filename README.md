@@ -1,13 +1,13 @@
 <div align="center">
-  <img alt="Octowise logo" src="appicon.png" height="240" />
+  <img alt="Octowise logo" src="assets/icon.png" height="240" />
 
   <br>
 
   <h1>Octowise</h1>
-  A small <a href="https://github.com/wailsapp/wails">Wails</a> application for retrieving Kobo highlights
-
-  It **isn't** functional yet and the codebase is very messy from successfully testing out Wails. Things are just thrown in there rather than set up nicely.
+  A small CLI tool for retrieving Kobo highlights
 </div>
+
+It isn't functional yet. The intention is to provide a CLI tool for power users while also providing a UI via the <a href="https://github.com/wailsapp/wails">Wails</a> project once v2 is ready for consumption.
 
 ## Credits
 
